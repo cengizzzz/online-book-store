@@ -133,7 +133,7 @@ public class Customer {
     }
 
     public static class Builder{
-        private final Identity identity;
+        private Identity identity;
         private Fullname fullname;
         private Age age;
         private Location location;
@@ -144,46 +144,25 @@ public class Customer {
         private Password password;
         private IsAdmin isAdmin;
 
-        public Builder(Identity identity) {
-            this.identity = identity;
+        public Builder identity(String value) {
+            this.identity = Identity.of(value);
+            return this;
         }
 
-        public Builder(Fullname fullname) {
-            this.fullname = fullname;
+        public Builder age(String value) {
+            this.age = Age.of(value);
+            return this;
         }
 
-        public Builder(Age age) {
-            this.age = age;
+        public Builder email(String value) {
+            this.email = Email.of(value);
+            return this;
         }
 
-        public Builder(Location location) {
-            this.location = location;
-        }
-
-        public Builder(Interests interests) {
-            this.interests = interests;
-        }
-
-        public Builder(Email email) {
-            this.email = email;
-        }
-
-        public Builder(Epurse epurse) {
-            this.epurse = epurse;
-        }
-
-        public Builder(Username username) {
-            this.username = username;
-        }
-
-        public Builder(Password password) {
-            this.password = password;
-        }
-
-        public Builder(IsAdmin isAdmin) {
-            this.isAdmin = isAdmin;
+        public Builder password(String value) {
+            this.password = Password.of(value);
+            return this;
         }
 
     }
-
 }
