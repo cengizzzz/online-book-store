@@ -79,7 +79,7 @@ public class Stock {
 			this.sku = StockKeepingUnit.of(value);
 			return this;
 		}
-
+		
 		public Builder isbn(String value) {
 			this.isbn = Isbn.of(value);
 			return this;
@@ -97,7 +97,6 @@ public class Stock {
 
 		public Stock build() {
 			var stock = new Stock(sku, isbn, numberOfBooksLeft, numberOfBooksSold);
-
 			return stock;
 		}
 	}
