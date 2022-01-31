@@ -1,4 +1,4 @@
-package com.example.stock.domain;
+package stock.domain;
 
 import java.util.Objects;
 
