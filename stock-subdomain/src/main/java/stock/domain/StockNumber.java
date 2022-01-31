@@ -1,4 +1,4 @@
-package com.example.stock.domain;
+package stock.domain;
 
 public final class StockNumber {
 	public static final StockNumber EMPTY = new StockNumber(0);
