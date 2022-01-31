@@ -12,5 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="customer-domain" />
+    <orderEntry type="module" module-name="book-domain" />
   </component>
 </module>
