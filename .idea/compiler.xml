@@ -6,13 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="stock-subdomain" />
+        <module name="customer-domain" />
         <module name="bookstore" />
+        <module name="book-domain" />
+        <module name="stock-subdomain" />
         <module name="order-subdomain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book-domain" target="17" />
       <module name="bookstore" target="17" />
+      <module name="customer-domain" target="17" />
       <module name="order-subdomain" target="17" />
       <module name="stock-subdomain" target="17" />
     </bytecodeTargetLevel>
