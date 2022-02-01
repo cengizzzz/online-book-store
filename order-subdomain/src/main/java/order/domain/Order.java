@@ -16,7 +16,6 @@ public class Order {
         this.book = book;
         this.customer = customer;
     }
-
     public OrderId getOrderId() {
         return orderId;
     }
