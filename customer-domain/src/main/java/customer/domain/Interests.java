@@ -1,4 +1,5 @@
 package customer.domain;
 
-public class Interests {
+public enum Interests {
+    EDEBIYAT,BILIM;
 }
