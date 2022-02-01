@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/online-book-store.iml" filepath="$PROJECT_DIR$/.idea/online-book-store.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-subdomain/order-subdomain.iml" filepath="$PROJECT_DIR$/order-subdomain/order-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" filepath="$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" filepath="$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" filepath="$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" />
     </modules>
   </component>
