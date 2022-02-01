@@ -8,6 +8,9 @@
         <option value="$PROJECT_DIR$/stock-subdomain/pom.xml" />
         <option value="$PROJECT_DIR$/book-domain/pom.xml" />
         <option value="$PROJECT_DIR$/customer-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/publisher-subdomain/pom.xml" />
+        <option value="$PROJECT_DIR$/sale-subdomain/pom.xml" />
+        <option value="$PROJECT_DIR$/category-subdomain/pom.xml" />
       </list>
     </option>
   </component>

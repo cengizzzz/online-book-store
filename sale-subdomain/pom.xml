@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>book-domain</artifactId>
+    <artifactId>sale-subdomain</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>publisher-subdomain</artifactId>
+            <artifactId>customer-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
