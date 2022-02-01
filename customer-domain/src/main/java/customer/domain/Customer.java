@@ -132,7 +132,7 @@ public class Customer {
                 '}';
     }
 
-    public static class Builder{
+    public static class Builder {
         private Identity identity;
         private Fullname fullname;
         private Age age;
@@ -149,12 +149,18 @@ public class Customer {
             return this;
         }
 
-        public Builder age(String value) {
+        public Builder age(int value) {
             this.age = Age.of(value);
             return this;
         }
 
+        public Builder epurse(int value) {
+            this.epurse = Epurse.of(value);
+            return this;
+        }
+
         public Builder email(String value) {
+            email.of(value);
             this.email = Email.of(value);
             return this;
         }
@@ -162,6 +168,11 @@ public class Customer {
         public Builder password(String value) {
             this.password = Password.of(value);
             return this;
+        }
+
+        public Customer build() {
+            var customer = new Customer(identity, fullname, age, location, interests, email, epurse, username, password, isAdmin);
+            return customer;
         }
 
     }

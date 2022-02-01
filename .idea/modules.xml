@@ -4,9 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/book-domain/book-domain.iml" filepath="$PROJECT_DIR$/book-domain/book-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore/bookstore.iml" filepath="$PROJECT_DIR$/bookstore/bookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/category-subdomain/category-subdomain.iml" filepath="$PROJECT_DIR$/category-subdomain/category-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer-domain/customer-domain.iml" filepath="$PROJECT_DIR$/customer-domain/customer-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/online-book-store.iml" filepath="$PROJECT_DIR$/.idea/online-book-store.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-subdomain/order-subdomain.iml" filepath="$PROJECT_DIR$/order-subdomain/order-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" filepath="$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" filepath="$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" filepath="$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" filepath="$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" />
     </modules>
   </component>
