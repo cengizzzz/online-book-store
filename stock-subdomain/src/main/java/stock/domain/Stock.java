@@ -1,5 +1,7 @@
 package stock.domain;
 
+import book.domain.Isbn;
+
 import java.util.Objects;
 
 public class Stock {

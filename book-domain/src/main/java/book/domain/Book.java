@@ -1,9 +1,7 @@
 package book.domain;
 
-
-import publisher.domain.Publisher;
-
 import java.util.List;
+
 import java.util.Objects;
 
 public class Book {
@@ -124,7 +122,8 @@ public class Book {
                 ", category=" + category +
                 '}';
     }
-    public static class Builder{
+
+    public static class Builder {
         private Isbn isbn;
         private Title title;
         private Author author;
@@ -136,19 +135,22 @@ public class Book {
         private Category category;
 
         public Builder isbn(String value) {
-            this.isbn= Isbn.of(value);
+            this.isbn = Isbn.of(value);
             return this;
         }
+
         public Builder publicationYear(int value) {
-            this.edition= PublicationYear.of(value);
+            this.publicationYear = PublicationYear.of(value);
             return this;
         }
+
         public Builder price(double value) {
-            this.price= Price.of(value);
+            this.price = Price.of(value);
             return this;
         }
+
         public Book build() {
-            var book = new Book(isbn, publicationYear, price);
+            var book = new Book(isbn, title, author, publisher, edition, publicationYear, price, reviews, category);
             return book;
         }
     }
