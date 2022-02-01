@@ -1,6 +1,8 @@
 package book.domain;
 
 
+import publisher.domain.Publisher;
+
 import java.util.List;
 import java.util.Objects;
 

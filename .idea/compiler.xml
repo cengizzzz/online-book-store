@@ -9,6 +9,7 @@
         <module name="customer-domain" />
         <module name="book-domain" />
         <module name="bookstore" />
+        <module name="category-subdomain" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
         <module name="stock-subdomain" />
@@ -18,6 +19,7 @@
     <bytecodeTargetLevel>
       <module name="book-domain" target="17" />
       <module name="bookstore" target="17" />
+      <module name="category-subdomain" target="17" />
       <module name="customer-domain" target="17" />
       <module name="order-subdomain" target="17" />
       <module name="publisher-subdomain" target="17" />
