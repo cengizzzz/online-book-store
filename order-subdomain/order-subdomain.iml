@@ -14,5 +14,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="customer-domain" />
     <orderEntry type="module" module-name="book-domain" />
+    <orderEntry type="module" module-name="publisher-subdomain" />
   </component>
 </module>
