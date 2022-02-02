@@ -2,6 +2,10 @@ package book.domain;
 
 
 
+import category.domain.Category;
+import publisher.domain.Publisher;
+
+
 import java.util.Objects;
 
 public class Book {
@@ -12,10 +16,13 @@ public class Book {
     private Edition edition;
     private PublicationYear publicationYear;
     private Price price;
+    private Content content;
+    private Popularity popularity;
+    private CoverPhoto coverPhoto;
     private Reviews reviews;
     private Category category;
 
-    public Book(Isbn isbn, Title title, Author author, Publisher publisher, Edition edition, PublicationYear publicationYear, Price price, Reviews reviews, Category category) {
+    public Book(Isbn isbn, Title title, Author author, Publisher publisher, Edition edition, PublicationYear publicationYear, Price price, Content content, Popularity popularity, CoverPhoto coverPhoto, Reviews reviews, Category category) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -95,6 +102,30 @@ public class Book {
         this.category = category;
     }
 
+    public Content getContent() {
+        return content;
+    }
+
+    public void setContent(Content content) {
+        this.content = content;
+    }
+
+    public Popularity getPopularity() {
+        return popularity;
+    }
+
+    public void setPopulartiy(Popularity popularty) {
+        this.popularity = popularty;
+    }
+
+    public CoverPhoto getCoverPhoto() {
+        return coverPhoto;
+    }
+
+    public void setCoverPhoto(CoverPhoto coverPhoto) {
+        this.coverPhoto = coverPhoto;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -118,6 +149,9 @@ public class Book {
                 ", edition=" + edition +
                 ", publicationYear=" + publicationYear +
                 ", price=" + price +
+                ", content=" + content +
+                ", popularity=" + popularity +
+                ", coverPhoto=" + coverPhoto +
                 ", reviews=" + reviews +
                 ", category=" + category +
                 '}';
@@ -131,6 +165,9 @@ public class Book {
         private Edition edition;
         private PublicationYear publicationYear;
         private Price price;
+        private Content content;
+        private Popularity popularity;
+        private CoverPhoto coverPhoto;
         private Reviews reviews;
         private Category category;
 
@@ -148,9 +185,13 @@ public class Book {
                 this.price = Price.of(value);
             return this;
         }
+        public Builder popularity(int value) {
+            this.popularity = Popularity.of(value);
+            return this;
+        }
 
         public Book build() {
-            var book = new Book(isbn, title, author, publisher, edition, publicationYear, price, reviews, category);
+            var book = new Book(isbn, title, author, publisher, edition, publicationYear, price,content,popularity,coverPhoto, reviews, category);
             return book;
         }
     }
