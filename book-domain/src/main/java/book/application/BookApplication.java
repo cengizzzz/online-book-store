@@ -6,8 +6,8 @@ import book.domain.Isbn;
 import java.util.Optional;
 
 public interface BookApplication {
-    Book addBook(Isbn isbn);
+    Book addBook(Book book);
     Book deleBook(Isbn isbn);
     Optional<Book> findBookByIsbn(Isbn isbn);
-    Book updateBook(Isbn isbn);
+    Book updateBook(Book book);
 }
