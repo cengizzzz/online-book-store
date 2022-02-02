@@ -2,6 +2,6 @@ package customer.infrastructure;
 
 import customer.application.business.events.CustomerEvent;
 
-public interface EventPublisher {
+public interface CustomerEventPublisher {
     void publishEvent(CustomerEvent businessEvent);
 }
