@@ -9,10 +9,14 @@ import java.util.Optional;
 
 public class StandardCustomerApplication implements CustomerApplication {
     private CustomerRepository customerRepository;
-    
 
     @Override
     public Customer addCustomer(Customer customer) {
+        return null;
+    }
+
+    @Override
+    public Customer updateCustomer(Customer customer) {
         return null;
     }
 

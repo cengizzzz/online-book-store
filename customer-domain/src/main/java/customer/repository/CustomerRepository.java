@@ -8,7 +8,9 @@ import java.util.Optional;
 public interface CustomerRepository {
     boolean existsByIdentity(Identity identity);
 
-    Customer save(Customer customer);
+    Customer add(Customer customer);
+
+    Customer update(Customer customer);
 
     Optional<Customer> remove(Identity identity);
 
