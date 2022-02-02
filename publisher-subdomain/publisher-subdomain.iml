@@ -11,5 +11,7 @@
     </content>
     <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="book-domain" />
+    <orderEntry type="module" module-name="category-subdomain" />
   </component>
 </module>
