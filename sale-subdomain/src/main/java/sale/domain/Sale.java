@@ -1,8 +1,7 @@
 package sale.domain;
 
 import customer.domain.Customer;
-
-import java.awt.print.Book;
+import book.domain.Book;
 import java.util.Objects;
 
 public class Sale {
