@@ -1,5 +1,6 @@
 package publisher.application.business;
 
+import book.application.business.exception.BookNotFoundException;
 import book.domain.Book;
 import publisher.application.PublisherApplication;
 import publisher.domain.Publisher;
@@ -14,9 +15,6 @@ public class StandardPublisherApplication implements PublisherApplication {
 
     @Override
     public Publisher addBook(Book book) {
-        var isbn = book.getIsbn();
-        if(publisherRepository.existByIsbn(isbn))
-        return null;
         return null;
     }
 
