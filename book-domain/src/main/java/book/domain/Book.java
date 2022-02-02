@@ -1,7 +1,10 @@
 package book.domain;
 
+
 import category.domain.Category;
 import publisher.domain.Publisher;
+
+import java.util.List;
 
 import java.util.Objects;
 
@@ -141,12 +144,12 @@ public class Book {
         }
 
         public Builder publicationYear(int value) {
-            this.publicationYear = PublicationYear.of(value);
-            return this;
-        }
+                this.publicationYear = PublicationYear.of(value);
+                return this;
+            }
 
-        public Builder price(double value) {
-            this.price = Price.of(value);
+            public Builder price(double value) {
+                this.price = Price.of(value);
             return this;
         }
 
