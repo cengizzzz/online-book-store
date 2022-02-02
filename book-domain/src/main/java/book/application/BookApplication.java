@@ -10,4 +10,5 @@ public interface BookApplication {
     Book deleBook(Isbn isbn);
     Optional<Book> findBookByIsbn(Isbn isbn);
     Book updateBook(Book book);
+
 }
