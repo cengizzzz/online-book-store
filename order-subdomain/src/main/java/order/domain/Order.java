@@ -65,5 +65,15 @@ public class Order {
         private OrderId orderId;
         private Book book;
         private Customer customer;
+
+        public Builder orderId(String value) {
+            this.orderId = orderId.Of(value);
+            return this;
+        }
+
+        public Order build() {
+            var stock = new Order(orderId, book, customer);
+            return stock;
+        }
     }
 }
