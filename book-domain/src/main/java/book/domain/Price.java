@@ -2,10 +2,10 @@ package book.domain;
 
 import java.util.Objects;
 
-public class Price {
+public final class Price {
     private final double price;
 
-    public Price(double price) {
+    private Price(double price) {
         this.price = price;
     }
 

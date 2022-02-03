@@ -1,9 +1,9 @@
 package book.domain;
 
-public class PublicationYear {
+public final class PublicationYear {
     private final int publicationYear;
 
-    public PublicationYear(int publicationYear) {
+    private PublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
 

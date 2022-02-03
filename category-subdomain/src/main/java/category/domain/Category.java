@@ -13,6 +13,12 @@ public class Category {
         this.subCategory = subCategory;
     }
 
+    public static Category of(Category value) {
+        // Validation olabilir.
+        return new Category(value.categoryID, value.categoryName, value.subCategory);
+    }
+
+
     public CategoryID getCategoryID() {
         return categoryID;
     }

@@ -3,6 +3,7 @@ import category.domain.Category;
 import publisher.domain.Publisher;
 
 
+import java.util.List;
 import java.util.Objects;
 
 public class Book {
@@ -19,7 +20,7 @@ public class Book {
     private Reviews reviews;
     private Category category;
 
-    public Book(Isbn isbn, Title title, Author author, Publisher publisher, Edition edition, PublicationYear publicationYear, Price price, Content content, Popularity popularity, CoverPhoto coverPhoto, Reviews reviews, Category category) {
+    private Book(Isbn isbn, Title title, Author author, Publisher publisher, Edition edition, PublicationYear publicationYear, Price price, Content content, Popularity popularity, CoverPhoto coverPhoto, Reviews reviews, Category category) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -27,9 +28,13 @@ public class Book {
         this.edition = edition;
         this.publicationYear = publicationYear;
         this.price = price;
+        this.content = content;
+        this.popularity = popularity;
+        this.coverPhoto = coverPhoto;
         this.reviews = reviews;
         this.category = category;
     }
+
 
     public Isbn getIsbn() {
         return isbn;
@@ -168,28 +173,53 @@ public class Book {
         private Reviews reviews;
         private Category category;
 
-        public Builder isbn(String value) {
+        public Builder isbn(String value){
             this.isbn = Isbn.of(value);
             return this;
         }
-
-        public Builder publicationYear(int value) {
-                this.publicationYear = PublicationYear.of(value);
-                return this;
-            }
-
-            public Builder price(double value) {
-                this.price = Price.of(value);
+        public Builder title(String value){
+            this.title = Title.of(value);
             return this;
         }
-        public Builder popularity(int value) {
+        public Builder author(String value){
+            this.author = Author.of(value);
+            return this;
+        }
+        public Builder publisher(Publisher value){
+            this.publisher = Publisher.of(value);
+            return this;
+        }
+        public Builder edition(String value){
+            this.edition = Edition.of(value);
+            return this;
+        }
+        public Builder publicationYear(int value){
+            this.publicationYear = PublicationYear.of(value);
+            return this;
+        }
+        public Builder price(double value){
+            this.price = Price.of(value);
+            return this;
+        }
+        public Builder content(List<String> value){
+            this.content = Content.of(value);
+            return this;
+        }
+        public Builder popularity(int value){
             this.popularity = Popularity.of(value);
             return this;
         }
-
-        public Book build() {
-            var book = new Book(isbn, title, author, publisher, edition, publicationYear, price,content,popularity,coverPhoto, reviews, category);
-            return book;
+        public Builder coverPhoto(byte[] value){
+            this.coverPhoto = CoverPhoto.valueOf(value);
+            return this;
+        }
+        public Builder reviews(List<String> value){
+            this.reviews = Reviews.of(value);
+            return this;
+        }
+        public Builder category(Category value){
+            this.category = Category.of(value);
+            return this;
         }
     }
 }

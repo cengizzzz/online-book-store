@@ -13,6 +13,10 @@ public class Publisher {
         this.publisherLogo = publisherLogo;
     }
 
+    public static Publisher of(Publisher value) {
+        return new Publisher(value.publisherID, value.publisherName, value.publisherLogo);
+    }
+
     public PublisherID getPublisherID() {
         return publisherID;
     }
