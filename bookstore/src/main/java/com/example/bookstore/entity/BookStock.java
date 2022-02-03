@@ -1,6 +1,7 @@
 package com.example.bookstore.entity;
 
 
+import com.example.bookstore.validation.IsbnValidation;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import java.util.Objects;
 @DynamicUpdate
 public class BookStock {
     @Id
+    @IsbnValidation
     private String isbn;
     private int copiesLeft;
     private int copiesSold;
