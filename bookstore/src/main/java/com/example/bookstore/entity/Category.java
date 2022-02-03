@@ -1,10 +1,13 @@
 package com.example.bookstore.entity;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name="categories")
+@DynamicUpdate
 public class Category {
     @Id
     private int id;
