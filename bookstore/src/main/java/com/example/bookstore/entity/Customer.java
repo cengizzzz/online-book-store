@@ -1,8 +1,7 @@
 package com.example.bookstore.entity;
 
-
-
 import com.example.bookstore.validation.TcKimlikNo;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -13,6 +12,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name="customers")
+@DynamicUpdate
 public class Customer {
     @Id
     @TcKimlikNo
