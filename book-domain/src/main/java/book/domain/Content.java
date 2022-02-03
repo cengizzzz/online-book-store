@@ -3,13 +3,13 @@ package book.domain;
 import java.util.List;
 
 public class Content {
-    private final List<Content> content;
+    private final List<String> content;
 
-    public Content(List<Content> content) {
+    public Content(List<String> content) {
         this.content = content;
     }
 
-    public List<Content> getContent() {
+    public List<String> getContent() {
         return content;
     }
 

@@ -1,8 +1,9 @@
 package book.domain;
 
+import java.lang.annotation.Annotation;
 import java.util.Objects;
 
-public class Isbn {
+public class Isbn implements Annotation {
     private final String value;
 
     public Isbn(String value) {

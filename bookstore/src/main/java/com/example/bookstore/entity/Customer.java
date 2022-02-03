@@ -19,7 +19,7 @@ public class Customer {
     private String identity;
     @NotBlank
     private String fullname;
-    @Min(6)
+    @Min(2015)
     private int age;
     private String location;
     @Enumerated(EnumType.STRING)
