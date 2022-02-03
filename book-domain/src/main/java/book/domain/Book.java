@@ -221,5 +221,9 @@ public class Book {
             this.category = Category.of(value);
             return this;
         }
+        public Book build(){
+            var book = new Book(isbn, title, author, publisher,edition,publicationYear,price,content,popularity,coverPhoto,reviews,category);
+            return book;
+        }
     }
 }
