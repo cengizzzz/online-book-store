@@ -3,13 +3,13 @@ package book.domain;
 import java.util.List;
 
 public class Reviews {
-    private final List<Reviews> reviews;
+    private final List<String> reviews;
 
-    public Reviews(List<Reviews> reviews) {
+    public Reviews(List<String> reviews) {
         this.reviews = reviews;
     }
 
-    public List<Reviews> getReviews() {
+    public List<String> getReviews() {
         return reviews;
     }
 
