@@ -1,16 +1,19 @@
 package book.domain;
 
-import java.util.Objects;
-
-public class Author {
+public final class Author {
     private final String author;
 
-    public Author(String author) {
+    private Author(String author) {
         this.author = author;
     }
 
     public String getAuthor() {
         return author;
+    }
+
+    public static Author of(String value){
+        // Validation olabilir
+        return new Author(value);
     }
 
     @Override
