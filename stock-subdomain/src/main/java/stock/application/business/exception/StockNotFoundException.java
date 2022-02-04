@@ -1,4 +1,4 @@
-package application.business.exception;
+package stock.application.business.exception;
 
 public class StockNotFoundException extends RuntimeException{
     private final String sku;

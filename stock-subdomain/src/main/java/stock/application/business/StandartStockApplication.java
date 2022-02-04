@@ -1,11 +1,11 @@
-package application.business;
+package stock.application.business;
 
-import application.StockApplication;
-import application.business.event.StockAddedEvent;
-import Repository.StockRepository;
-import application.business.exception.ExistingStockException;
-import application.business.exception.StockNotFoundException;
-import application.insfrastructure.StockEventPublisher;
+import stock.application.StockApplication;
+import stock.application.business.event.StockAddedEvent;
+import stock.repository.StockRepository;
+import stock.application.business.exception.ExistingStockException;
+import stock.application.business.exception.StockNotFoundException;
+import stock.insfrastructure.StockEventPublisher;
 import stock.domain.Stock;
 
 public class StandartStockApplication implements StockApplication {

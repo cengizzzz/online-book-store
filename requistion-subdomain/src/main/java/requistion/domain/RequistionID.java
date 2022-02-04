@@ -2,11 +2,15 @@ package requistion.domain;
 
 import java.util.Objects;
 
-public class RequistionID {
+public final class RequistionID {
     private final String requistionID;
 
-    public RequistionID(String requistionID) {
+    private RequistionID(String requistionID) {
         this.requistionID = requistionID;
+    }
+
+    public static RequistionID of(String value) {
+        return new RequistionID(value);
     }
 
     public String getRequistionID() {

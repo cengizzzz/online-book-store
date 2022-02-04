@@ -1,7 +1,7 @@
-package application.insfrastructure;
+package stock.insfrastructure;
 
 
-import application.business.event.StockEvent;
+import stock.application.business.event.StockEvent;
 
 public interface StockEventPublisher {
     void stockPublishEvent(StockEvent businessEvent);

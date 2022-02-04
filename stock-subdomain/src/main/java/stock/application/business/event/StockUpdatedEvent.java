@@ -1,4 +1,4 @@
-package application.business.event;
+package stock.application.business.event;
 
 import stock.domain.Stock;
 
