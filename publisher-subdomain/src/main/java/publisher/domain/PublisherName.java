@@ -5,8 +5,12 @@ import java.util.Objects;
 public final class PublisherName {
     private final String publisherName;
 
-    public PublisherName(String publisherName) {
+    private PublisherName(String publisherName) {
         this.publisherName = publisherName;
+    }
+
+    public static PublisherName of(String value) {
+        return new PublisherName(value);
     }
 
     public String getPublisherName() {

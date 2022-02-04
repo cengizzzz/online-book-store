@@ -35,6 +35,11 @@ public class Book {
         this.category = category;
     }
 
+    public static Book of(Book value) {
+        return new Book(value.isbn, value.title, value.author, value.publisher, value.edition,
+                value.publicationYear, value.price, value.content, value.popularity, value.coverPhoto, value.reviews, value.category);
+    }
+
 
     public Isbn getIsbn() {
         return isbn;

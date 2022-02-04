@@ -5,8 +5,12 @@ import java.util.Objects;
 public final class PublisherLogo {
     private final byte[] publisherLogo;
 
-    public PublisherLogo(byte[] publisherLogo) {
+    private PublisherLogo(byte[] publisherLogo) {
         this.publisherLogo = publisherLogo;
+    }
+
+    public static PublisherLogo of(byte[] value) {
+        return new PublisherLogo(value);
     }
 
     public byte[] getPublisherLogo() {

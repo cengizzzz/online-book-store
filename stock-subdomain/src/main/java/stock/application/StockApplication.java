@@ -1,4 +1,4 @@
-package application;
+package stock.application;
 
 import stock.domain.Stock;
 

@@ -1,4 +1,4 @@
-package Repository;
+package stock.repository;
 
 import stock.domain.Stock;
 import stock.domain.StockKeepingUnit;

@@ -2,6 +2,8 @@ package sale.domain;
 
 import customer.domain.Customer;
 import book.domain.Book;
+
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Sale {
@@ -15,6 +17,34 @@ public class Sale {
         this.customer = customer;
         this.book = book;
         this.timeStamp = timeStamp;
+    }
+
+    public static class Builder{
+        private SaleID saleID;
+        private Customer customer;
+        private Book book;
+        private TimeStamp timeStamp;
+
+        public Builder saleID(int value){
+            this.saleID = SaleID.of(value);
+            return this;
+        }
+        public Builder customer(Customer value){
+            this.customer = Customer.of(value);
+            return this;
+        }
+        public Builder book(Book value){
+            this.book = Book.of(value);
+            return this;
+        }
+        public Builder timeStamp(LocalDateTime value){
+            this.timeStamp = TimeStamp.of(value);
+            return this;
+        }
+        public Sale build(){
+            var sale = new Sale(saleID,customer,book,timeStamp);
+            return sale;
+        }
     }
 
     public SaleID getSaleID() {

@@ -3,11 +3,15 @@ package sale.domain;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class TimeStamp {
+public final class TimeStamp {
     private final LocalDateTime timeStamp;
 
-    public TimeStamp(LocalDateTime timeStamp) {
+    private TimeStamp(LocalDateTime timeStamp) {
         this.timeStamp = timeStamp;
+    }
+
+    public static TimeStamp of(LocalDateTime value) {
+        return new TimeStamp(value);
     }
 
     public LocalDateTime getTimeStamp() {

@@ -2,11 +2,15 @@ package sale.domain;
 
 import java.util.Objects;
 
-public class SaleID {
+public final class SaleID {
     private final int saleID;
 
-    public SaleID(int saleID) {
+    private SaleID(int saleID) {
         this.saleID = saleID;
+    }
+
+    public static SaleID of(int value) {
+        return new SaleID(value);
     }
 
     public int getSaleID() {

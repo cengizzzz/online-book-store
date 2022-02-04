@@ -5,8 +5,12 @@ import java.util.Objects;
 public final class PublisherID {
     private final String publisherID;
 
-    public PublisherID(String publisherID) {
+    private PublisherID(String publisherID) {
         this.publisherID = publisherID;
+    }
+
+    public static PublisherID of(String value) {
+        return new PublisherID(value);
     }
 
     public String getPublisherID() {

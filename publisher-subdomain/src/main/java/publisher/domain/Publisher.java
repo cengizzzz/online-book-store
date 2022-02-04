@@ -1,11 +1,36 @@
 package publisher.domain;
 
+import book.domain.Book;
+
 import java.util.Objects;
 
 public class Publisher {
     private PublisherID publisherID;
     private PublisherName publisherName;
     private PublisherLogo publisherLogo;
+
+    public static class Builder {
+        private PublisherID publisherID;
+        private PublisherName publisherName;
+        private PublisherLogo publisherLogo;
+
+        public Builder publisherID(String value){
+            this.publisherID = PublisherID.of(value);
+            return this;
+        }
+        public Builder publisherName(String value){
+            this.publisherName = PublisherName.of(value);
+            return this;
+        }
+        public Builder publisherLogo(byte[] value){
+            this.publisherLogo = PublisherLogo.of(value);
+            return this;
+        }
+        public Publisher build() {
+            var publisher = new Publisher(publisherID,publisherName,publisherLogo);
+            return publisher;
+        }
+    }
 
     public Publisher(PublisherID publisherID, PublisherName publisherName, PublisherLogo publisherLogo) {
         this.publisherID = publisherID;

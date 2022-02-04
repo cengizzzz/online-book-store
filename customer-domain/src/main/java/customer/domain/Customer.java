@@ -27,6 +27,11 @@ public class Customer {
         this.isAdmin = isAdmin;
     }
 
+    public static Customer of(Customer value) {
+        return new Customer(value.identity, value.fullname, value.age, value.location, value.interests, value.email, value.epurse,
+                value.username, value.password, value.isAdmin);
+    }
+
     public Identity getIdentity() {
         return identity;
     }
@@ -188,6 +193,5 @@ public class Customer {
             var customer = new Customer(identity, fullname, age, location, interests, email, epurse, username, password, isAdmin);
             return customer;
         }
-
     }
 }
