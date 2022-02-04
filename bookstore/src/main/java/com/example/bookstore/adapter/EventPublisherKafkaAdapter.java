@@ -7,8 +7,8 @@ import book.infrastructure.EventPublisher;
 import category.application.business.events.CategoryEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import customer.application.business.events.CustomerEvent;
 import customer.infrastructure.CustomerEventPublisher;
+import customer.application.business.events.CustomerEvent;
 import order.application.business.events.OrderEvent;
 import order.infrastructure.OrderEventPublisher;
 import org.slf4j.Logger;
@@ -16,17 +16,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 
-public class EventPublisherKafkaAdapter implements
-        category.infrastructure.EventPublisher, EventPublisher,
-        CustomerEventPublisher, StockEventPublisher, OrderEventPublisher {
+public class EventPublisherKafkaAdapter implements category.infrastructure.EventPublisher,
+        EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher {
+
     private static final Logger logger =
             LoggerFactory.getLogger(EventPublisherKafkaAdapter.class);
     @Value("${book.events.topic}")
     private String bookTopicName;
     @Value("${customer.events.topic}")
     private String customerTopicName;
+    @Value("${category.events.topic}")
     private String categoryTopicName;
+    @Value("${stock.events.topic}")
     private String stockTopicName;
+    @Value("${order.events.topic}")
     private String orderTopicName;
     //private String publisherTopicName;
     //private String requistion;
