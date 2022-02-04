@@ -4,10 +4,13 @@ import book.application.business.events.BookEvent;
 import book.infrastructure.EventPublisher;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import customer.infrastructure.CustomerEventPublisher;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
+
 
 public class EventPublisherKafkaAdapter implements EventPublisher {
     private static final Logger logger =
