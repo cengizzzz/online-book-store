@@ -22,10 +22,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 
 
-
-public class EventPublisherKafkaAdapter implements EventPublisher {
-=======
-public class EventPublisherKafkaAdapter extends CustomerEvent implements category.infrastructure.EventPublisher, EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher{
+public class EventPublisherKafkaAdapter implements category.infrastructure.EventPublisher, EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher{
 
     private static final Logger logger =
             LoggerFactory.getLogger(EventPublisherKafkaAdapter.class);
