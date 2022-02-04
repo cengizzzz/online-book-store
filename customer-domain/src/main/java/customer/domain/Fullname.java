@@ -1,6 +1,6 @@
 package customer.domain;
 
-public class Fullname {
+public final class Fullname {
     private final String value;
 
     private Fullname(String value) {

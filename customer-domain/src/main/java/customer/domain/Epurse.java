@@ -1,6 +1,6 @@
 package customer.domain;
 
-public class Epurse {
+public final class Epurse {
     private final int value;
 
     private Epurse(int value) {

@@ -2,11 +2,16 @@ package category.domain;
 
 import java.util.Objects;
 
-public class CategoryID {
+public final class CategoryID {
     private final String categoryID;
 
-    public CategoryID(String categoryID) {
+    private CategoryID(String categoryID) {
         this.categoryID = categoryID;
+    }
+
+    public static CategoryID of(String value) {
+        // Validation olabilir
+        return new CategoryID(value);
     }
 
     public String getCategoryID() {

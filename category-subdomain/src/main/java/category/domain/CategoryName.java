@@ -2,11 +2,16 @@ package category.domain;
 
 import java.util.Objects;
 
-public class CategoryName {
+public final class CategoryName {
     private final String categoryName;
 
-    public CategoryName(String categoryName) {
+    private CategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public static CategoryName of(String value) {
+        // Validation olabilir
+        return new CategoryName(value);
     }
 
     public String getCategoryName() {

@@ -1,6 +1,6 @@
 package customer.domain;
 
-public class Age {
+public final class Age {
 
     private final int value;
 

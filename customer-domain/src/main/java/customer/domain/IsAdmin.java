@@ -1,6 +1,6 @@
 package customer.domain;
 
-public class IsAdmin {
+public final class IsAdmin {
     private final boolean value;
 
     private IsAdmin(boolean value) {
