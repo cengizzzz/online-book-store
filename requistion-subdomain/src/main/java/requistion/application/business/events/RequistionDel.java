@@ -3,7 +3,7 @@ package requistion.application.business.events;
 import book.domain.Book;
 import requistion.domain.Requistion;
 
-public class RequistionDel {
+public class RequistionDel extends RequistionEvent{
     private final Requistion requistion;
 
     public RequistionDel(Requistion requistion) {
