@@ -1,7 +1,5 @@
 package publisher.domain;
 
-import book.domain.Book;
-
 import java.util.Objects;
 
 public class Publisher {

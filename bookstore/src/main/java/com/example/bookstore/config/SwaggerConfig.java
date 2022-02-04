@@ -46,7 +46,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     public Docket api(ServletContext servletContext) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage( "com.example.crm" ))
+                .apis(RequestHandlerSelectors.basePackage( "com.example.bookstore" ))
                 .paths(PathSelectors.any())
                 .build()
                 .host(host.concat(":").concat(Long.toString(port)))
@@ -62,7 +62,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private ApiInfo apiInfo() {
 
         return new ApiInfoBuilder()
-                .title("CRM MicroServices")
+                .title("Bookstore")
                 .description("<b>Client FrontEnd API</b><br /><br />Updated: [" + (new Date(apiTimeStamp)).toString() + " ]"
                         + " <script>document.title = \"CRM MicroServices\";"
                         + " document.getElementById('header').remove();"
