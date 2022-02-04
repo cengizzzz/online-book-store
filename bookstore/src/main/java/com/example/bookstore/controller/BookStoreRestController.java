@@ -33,7 +33,7 @@ public class BookStoreRestController {
     @ApiOperation(value = "This method is used to get the book for the given {isbn}")
 
     public GetBookResponse getBookByIsbn(@PathVariable @IsbnValidation String isbn){
-        return bookStoreServis.findBookByIdentity(isbn);
+        return bookStoreServis.findBookByIsbn(isbn);
     }
     @PostMapping
     public AddBookResponse addBook(
@@ -43,7 +43,7 @@ public class BookStoreRestController {
     }
     @DeleteMapping("isbn")
     public DeleteBookResponse deleteBookResponse(@PathVariable @IsbnValidation  String isbn){
-        return bookStoreServis.deleteBookByIdentity(isbn);
+        return bookStoreServis.deleteBookByIsbn(isbn);
     }
     @PutMapping("isbn")
     public UpdateBookResponse updateBookResponse(@RequestBody @Validated UpdateRequest request){
