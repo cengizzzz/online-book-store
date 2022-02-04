@@ -19,8 +19,6 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestMapping("book")
 @CrossOrigin
 @Validated
-@Api( tags = "Book")
-
 public class BookStoreRestController {
 
     private BookstoreService bookStoreServis;

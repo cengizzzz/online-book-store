@@ -9,9 +9,6 @@ import java.util.Optional;
 
 @Repository
 public class BookRepositoryMySqlAdapter implements BookRepository {
-
-
-
     @Override
     public boolean existsByIsbn(Isbn isbn) {
         return false;

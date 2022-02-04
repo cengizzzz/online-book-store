@@ -28,7 +28,7 @@ public class EventPublisherKafkaAdapter implements category.infrastructure.Event
 
     private static final Logger logger =
             LoggerFactory.getLogger(EventPublisherKafkaAdapter.class);
-    @Value("${book.events.topic}")
+    @Value(value = "${book.events.topic}")
     private String bookTopicName;
     @Value("${customer.events.topic}")
     private String customerTopicName;
