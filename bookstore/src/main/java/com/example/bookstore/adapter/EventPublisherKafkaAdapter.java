@@ -1,7 +1,7 @@
 package com.example.bookstore.adapter;
 
-import application.business.event.StockEvent;
-import application.insfrastructure.StockEventPublisher;
+import stock.application.business.event.StockEvent;
+import stock.insfrastructure.StockEventPublisher;
 import book.application.business.events.BookEvent;
 import book.infrastructure.EventPublisher;
 import category.application.business.events.CategoryEvent;
@@ -18,6 +18,8 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import requistion.application.business.events.RequistionEvent;
 import sale.application.business.events.SaleEvent;
+
+
 @Service
 public class EventPublisherKafkaAdapter implements category.infrastructure.EventPublisher,
         EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher

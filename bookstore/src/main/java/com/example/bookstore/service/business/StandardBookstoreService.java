@@ -2,6 +2,7 @@ package com.example.bookstore.service.business;
 
 import book.application.BookApplication;
 import book.application.business.exception.BookNotFoundException;
+import book.domain.Isbn;
 import com.example.bookstore.dto.request.AddBookRequest;
 import com.example.bookstore.dto.request.UpdateRequest;
 import com.example.bookstore.dto.response.AddBookResponse;
@@ -25,7 +26,7 @@ public class StandardBookstoreService implements BookstoreService {
 
     @Override
     public GetBookResponse findBookByIsbn(String isbn) {
-        var book = bookApplication.findBookByIsbn(isbn.valueOf(isbn));
+        var book = bookApplication.findBookByIsbn(Isbn.of(isbn));
         if (book.isEmpty())
             throw new BookNotFoundException("Cannot find book", isbn);
         return modelMapper.map(book.get(), GetBookResponse.class);
