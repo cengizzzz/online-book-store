@@ -5,7 +5,7 @@ import stock.domain.Stock;
 import java.util.UUID;
 
 public class StockEvent {
-        private final String eventId;
+    private final String eventId;
     public StockEvent(String eventId) {
         this.eventId = eventId;
     }
