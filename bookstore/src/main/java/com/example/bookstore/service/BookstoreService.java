@@ -8,8 +8,8 @@ import com.example.bookstore.dto.response.GetBookResponse;
 import com.example.bookstore.dto.response.UpdateBookResponse;
 
 public interface BookstoreService {
-    GetBookResponse findBookByIdentity(String isbn);
+    GetBookResponse findBookByIsbn(String isbn);
     AddBookResponse addBook(AddBookRequest request);
     UpdateBookResponse updateBook(UpdateRequest request);
-    DeleteBookResponse deleteBookByIdentity(String isbn);
+    DeleteBookResponse deleteBookByIsbn(String isbn);
 }
