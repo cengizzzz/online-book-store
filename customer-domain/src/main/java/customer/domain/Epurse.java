@@ -1,19 +1,19 @@
 package customer.domain;
 
 public class Epurse {
-    private final int value;
+    private final double value;
 
-    private Epurse(int value) {
+    private Epurse(double value) {
         this.value = value;
     }
 
-    public static Epurse of(int value) {
+    public static Epurse of(double value) {
         if (value <0)
             throw new IllegalArgumentException("Epurse should be a positive");
         return new Epurse(value);
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
