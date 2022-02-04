@@ -8,8 +8,8 @@ import java.util.Objects;
 
 public class Order {
     private OrderId orderId;
-   private Book book;
-   private Customer customer;
+    private Book book;
+    private Customer customer;
 
     public Order(OrderId orderId, Book book, Customer customer) {
         this.orderId = orderId;
@@ -70,10 +70,18 @@ public class Order {
             this.orderId = orderId.Of(value);
             return this;
         }
+        public Builder book(Book value){
+            this.book = Book.of(value);
+            return this;
+        }
+        public Builder customer(Customer value){
+            this.customer = Customer.of(value);
+            return this;
+        }
 
         public Order build() {
-            var stock = new Order(orderId, book, customer);
-            return stock;
+            var order = new Order(orderId, book, customer);
+            return order;
         }
     }
 }

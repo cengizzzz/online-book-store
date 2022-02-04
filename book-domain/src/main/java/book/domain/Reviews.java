@@ -2,14 +2,20 @@ package book.domain;
 
 import java.util.List;
 
-public class Reviews {
-    private final List<Reviews> reviews;
+public final class Reviews {
+    private final List<String> reviews;
 
-    public Reviews(List<Reviews> reviews) {
+    private Reviews(List<String> reviews) {
         this.reviews = reviews;
     }
 
-    public List<Reviews> getReviews() {
+    public static Reviews of(List<String> value) {
+        // Validation olabilir.
+        return new Reviews(value);
+    }
+
+
+    public List<String> getReviews() {
         return reviews;
     }
 

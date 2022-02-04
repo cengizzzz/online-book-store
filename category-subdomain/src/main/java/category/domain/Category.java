@@ -13,6 +13,12 @@ public class Category {
         this.subCategory = subCategory;
     }
 
+    public static Category of(Category value) {
+        // Validation olabilir.
+        return new Category(value.categoryID, value.categoryName, value.subCategory);
+    }
+
+
     public CategoryID getCategoryID() {
         return categoryID;
     }
@@ -57,5 +63,27 @@ public class Category {
                 ", categoryName=" + categoryName +
                 ", subCategory=" + subCategory +
                 '}';
+    }
+    public static class Builder {
+        private CategoryID categoryID;
+        private CategoryName categoryName;
+        private SubCategory subCategory;
+
+        public Builder categoryID(String value){
+            this.categoryID = CategoryID.of(value);
+            return this;
+        }
+        public Builder categoryName(String value){
+            this.categoryName = CategoryName.of(value);
+            return this;
+        }
+        public Builder subCategory(String value){
+            this.subCategory = SubCategory.of(value);
+            return this;
+        }
+        public Category build(){
+            var category = new Category(categoryID, categoryName, subCategory);
+            return category;
+        }
     }
 }

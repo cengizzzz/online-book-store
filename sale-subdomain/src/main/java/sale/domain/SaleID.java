@@ -2,14 +2,18 @@ package sale.domain;
 
 import java.util.Objects;
 
-public class SaleID {
-    private final String saleID;
+public final class SaleID {
+    private final int saleID;
 
-    public SaleID(String saleID) {
+    private SaleID(int saleID) {
         this.saleID = saleID;
     }
 
-    public String getSaleID() {
+    public static SaleID of(int value) {
+        return new SaleID(value);
+    }
+
+    public int getSaleID() {
         return saleID;
     }
 
@@ -18,12 +22,11 @@ public class SaleID {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleID saleID1 = (SaleID) o;
-        return saleID.equals(saleID1.saleID);
+        return saleID == saleID1.saleID;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(saleID);
     }
-
 }

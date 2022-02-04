@@ -2,10 +2,10 @@ package book.domain;
 
 import java.util.Objects;
 
-public class Popularity {
+public final class Popularity {
     private final int popularity;
 
-    public Popularity(int popularity) {
+    private Popularity(int popularity) {
         this.popularity = popularity;
     }
 

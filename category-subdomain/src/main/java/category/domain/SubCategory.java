@@ -2,11 +2,16 @@ package category.domain;
 
 import java.util.Objects;
 
-public class SubCategory {
+public final class SubCategory {
     private final String subCategory;
 
-    public SubCategory(String subCategory) {
+    private SubCategory(String subCategory) {
         this.subCategory = subCategory;
+    }
+
+    public static SubCategory of(String value) {
+        // Validation
+        return new SubCategory(value);
     }
 
     public String getSubCategory() {

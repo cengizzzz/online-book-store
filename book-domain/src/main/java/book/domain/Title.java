@@ -2,15 +2,20 @@ package book.domain;
 
 import java.util.Objects;
 
-public class Title {
+public final class Title {
     private final String title;
 
-    public Title(String title) {
+    private Title(String title) {
         this.title = title;
     }
 
     public String getTitle() {
         return title;
+    }
+
+    public static Title of(String value){
+        // Validation olabilir
+        return new Title(value);
     }
 
     @Override

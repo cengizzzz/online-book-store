@@ -3,7 +3,7 @@ package customer.domain;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Password {
+public final class Password {
     private final String value;
 
     private Password(String value) {

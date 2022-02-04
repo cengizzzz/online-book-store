@@ -1,6 +1,6 @@
 package customer.domain;
 
-public class Location {
+public final class Location {
     private final String value;
 
     private Location(String value) {

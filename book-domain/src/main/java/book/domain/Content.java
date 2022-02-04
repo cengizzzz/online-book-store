@@ -2,14 +2,19 @@ package book.domain;
 
 import java.util.List;
 
-public class Content {
-    private final List<Content> content;
+public final class Content {
+    private final List<String> content;
 
-    public Content(List<Content> content) {
+    private Content(List<String> content) {
         this.content = content;
     }
 
-    public List<Content> getContent() {
+    public static Content of(List<String> value) {
+        // Validation olabilir.
+        return new Content(value);
+    }
+
+    public List<String> getContent() {
         return content;
     }
 

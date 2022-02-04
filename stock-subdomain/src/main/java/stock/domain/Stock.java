@@ -14,7 +14,7 @@ public class Stock {
 		this(sku, isbn, StockNumber.EMPTY, SellNumber.EMPTY);
 	}
 
-	private 	Stock(StockKeepingUnit sku, Isbn isbn, StockNumber numberOfBooksLeft, SellNumber numberOfBooksSold) {
+	private Stock(StockKeepingUnit sku, Isbn isbn, StockNumber numberOfBooksLeft, SellNumber numberOfBooksSold) {
 		this.sku = sku;
 		this.isbn = isbn;
 		this.numberOfBooksLeft = numberOfBooksLeft;

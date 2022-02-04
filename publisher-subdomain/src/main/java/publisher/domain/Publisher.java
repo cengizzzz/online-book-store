@@ -7,10 +7,37 @@ public class Publisher {
     private PublisherName publisherName;
     private PublisherLogo publisherLogo;
 
+    public static class Builder {
+        private PublisherID publisherID;
+        private PublisherName publisherName;
+        private PublisherLogo publisherLogo;
+
+        public Builder publisherID(String value){
+            this.publisherID = PublisherID.of(value);
+            return this;
+        }
+        public Builder publisherName(String value){
+            this.publisherName = PublisherName.of(value);
+            return this;
+        }
+        public Builder publisherLogo(byte[] value){
+            this.publisherLogo = PublisherLogo.of(value);
+            return this;
+        }
+        public Publisher build() {
+            var publisher = new Publisher(publisherID,publisherName,publisherLogo);
+            return publisher;
+        }
+    }
+
     public Publisher(PublisherID publisherID, PublisherName publisherName, PublisherLogo publisherLogo) {
         this.publisherID = publisherID;
         this.publisherName = publisherName;
         this.publisherLogo = publisherLogo;
+    }
+
+    public static Publisher of(Publisher value) {
+        return new Publisher(value.publisherID, value.publisherName, value.publisherLogo);
     }
 
     public PublisherID getPublisherID() {
