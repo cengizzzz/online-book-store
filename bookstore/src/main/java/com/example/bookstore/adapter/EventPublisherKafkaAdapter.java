@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import customer.infrastructure.CustomerEventPublisher;
 
-=======
 import customer.application.business.events.CustomerEvent;
 import customer.infrastructure.CustomerEventPublisher;
 import order.application.business.events.OrderEvent;
