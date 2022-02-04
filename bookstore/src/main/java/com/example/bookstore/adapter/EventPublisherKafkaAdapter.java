@@ -15,9 +15,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 import requistion.application.business.events.RequistionEvent;
 import sale.application.business.events.SaleEvent;
-
+@Service
 public class EventPublisherKafkaAdapter implements category.infrastructure.EventPublisher,
         EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher
         ,requistion.infrastructure.EventPublisher,
