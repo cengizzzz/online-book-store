@@ -1,7 +1,9 @@
 package customer.domain;
 
+
 public class Epurse {
     private final double value;
+
 
     private Epurse(double value) {
         this.value = value;

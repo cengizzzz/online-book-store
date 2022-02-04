@@ -2,7 +2,7 @@ package customer.domain;
 
 import java.util.Objects;
 
-public class Identity {
+public final class Identity {
     private final String value;
 
     private Identity(String value) {
