@@ -17,6 +17,11 @@ public class StandardCustomerApplication implements CustomerApplication {
     private CustomerRepository customerRepository;
     private CustomerEventPublisher eventPublisher;
 
+    public StandardCustomerApplication(CustomerRepository customerRepository, CustomerEventPublisher eventPublisher) {
+        this.customerRepository = customerRepository;
+        this.eventPublisher = eventPublisher;
+    }
+
     @Override
     public Customer addCustomer(Customer customer) {
         var customerIdentity = customer.getIdentity();
