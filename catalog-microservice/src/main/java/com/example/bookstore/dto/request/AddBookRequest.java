@@ -1,6 +1,5 @@
 package com.example.bookstore.dto.request;
 
-import category.domain.Category;
 import com.example.bookstore.validation.IsbnValidation;
 import publisher.domain.Publisher;
 
@@ -20,12 +19,11 @@ public class AddBookRequest {
     private int publicationYear;
     @NotBlank
     private double price;
+    private List<String> categoryName;
     private List<String> content;
     private int popularity;
     private byte[] coverPhoto;
     private List<String> reviews;
-    private Category category;
-
     public AddBookRequest() {
     }
 
@@ -117,12 +115,12 @@ public class AddBookRequest {
         this.reviews = reviews;
     }
 
-    public Category getCategory() {
-        return category;
+    public List<String> getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryName(List<String> categoryName) {
+        this.categoryName = categoryName;
     }
 
     @Override
@@ -135,11 +133,11 @@ public class AddBookRequest {
                 ", edition='" + edition + '\'' +
                 ", publicationYear=" + publicationYear +
                 ", price=" + price +
+                ", categoryName=" + categoryName +
                 ", content=" + content +
                 ", popularity=" + popularity +
                 ", coverPhoto=" + Arrays.toString(coverPhoto) +
                 ", reviews=" + reviews +
-                ", category=" + category +
                 '}';
     }
 }

@@ -2,6 +2,7 @@ package com.example.bookstore.entity;
 
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.validator.constraints.ISBN;
+import publisher.domain.Publisher;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Arrays;
@@ -20,13 +21,14 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
-    @ManyToOne
+    @OneToMany
     private Publisher publisher;
     @NotBlank
     private String edition;
     private int publicationYear;
     private double price;
-    private String categoryName;
+    @ElementCollection
+    private List<String> categoryName;
     @ElementCollection
     private List<String> content;
     private int popularity;
@@ -37,11 +39,11 @@ public class Book {
     public Book() {
     }
 
-    public String getCategoryName() {
+    public List<String> getCategoryName() {
         return categoryName;
     }
 
-    public void setCategoryName(String categoryName) {
+    public void setCategoryName(List<String> categoryName) {
         this.categoryName = categoryName;
     }
 
