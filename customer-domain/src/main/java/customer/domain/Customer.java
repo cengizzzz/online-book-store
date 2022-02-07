@@ -3,7 +3,7 @@ package customer.domain;
 import java.util.Objects;
 
 public class Customer {
-    private final Identity identity;
+    private Identity identity;
     private Fullname fullname;
     private Age age;
     private Location location;
@@ -13,6 +13,9 @@ public class Customer {
     private Username username;
     private Password password;
     private IsAdmin isAdmin;
+
+    public Customer() {
+    }
 
     public Customer(Identity identity, Fullname fullname, Age age, Location location, Interests interests, Email email, Epurse epurse, Username username, Password password, IsAdmin isAdmin) {
         this.identity = identity;

@@ -10,7 +10,7 @@ public interface CustomerRepository {
 
     Customer add(Customer customer);
 
-    Customer update(Customer customer);
+    Customer update(Identity identity, Customer customer);
 
     Optional<Customer> remove(Identity identity);
 

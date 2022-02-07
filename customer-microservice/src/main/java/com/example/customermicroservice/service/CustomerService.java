@@ -10,6 +10,6 @@ import com.example.customermicroservice.dto.response.UpdateCustomerResponse;
 public interface CustomerService {
     GetCustomerResponse findCustomerByIdentity(String identity);
     AddCustomerResponse addCustomer(AddCustomerRequest request);
-    UpdateCustomerResponse updateCustomer(UpdateCustomerRequest request);
+    UpdateCustomerResponse updateCustomer(String identity,UpdateCustomerRequest request);
     DeleteCustomerResponse deleteCustomerByIdentity(String identity);
 }
