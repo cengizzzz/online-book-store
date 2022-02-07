@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" filepath="$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" filepath="$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" filepath="$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stock-microservis/stock-microservis.iml" filepath="$PROJECT_DIR$/stock-microservis/stock-microservis.iml" />
       <module fileurl="file://$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" filepath="$PROJECT_DIR$/stock-subdomain/stock-subdomain.iml" />
     </modules>
   </component>
