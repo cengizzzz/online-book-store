@@ -7,11 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="customer-domain" />
-        <module name="book-domain" />
         <module name="bookstore" />
-        <module name="category-subdomain" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
+        <module name="catalog-domain" />
         <module name="requistion-subdomain" />
         <module name="customer-microservice" />
         <module name="stock-subdomain" />
@@ -19,8 +18,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="book-domain" target="17" />
       <module name="bookstore" target="17" />
+      <module name="catalog-domain" target="17" />
       <module name="category-subdomain" target="17" />
       <module name="customer-domain" target="17" />
       <module name="customer-microservice" target="17" />
