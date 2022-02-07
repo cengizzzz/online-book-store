@@ -28,34 +28,30 @@ public class CustomerRepositoryMySqlAdapter implements CustomerRepository {
 
     @Override
     public Customer add(Customer customer) {
-        /*
         var document = mapper.map(customer, com.example.customermicroservice.entity.Customer.class);
         return mapper.map(customerJpaRepository.save(document),Customer.class);
-        */
-        return null;
     }
 
+
     @Override
-    public Customer update(Customer customer) {
-        return null;
+    public Customer update(Identity identity, Customer customer) {
+        var documentOld = customerJpaRepository.findById(identity.getValue());
+        documentOld.ifPresent( customerJpaRepository::delete);
+
+        var documentNew = mapper.map(customer, com.example.customermicroservice.entity.Customer.class);
+        return mapper.map(customerJpaRepository.save(documentNew),Customer.class);
     }
 
     @Override
     public Optional<Customer> remove(Identity identity) {
-        /*
         var document = customerJpaRepository.findById(identity.getValue());
         document.ifPresent( customerJpaRepository::delete);
         return document.map(doc -> mapper.map(doc, Customer.class));
-        */
-        return Optional.empty();
     }
 
     @Override
     public Optional<Customer> findOneById(Identity identity) {
-        /*
         return customerJpaRepository.findById(identity.getValue())
                 .map(doc -> mapper.map(doc, Customer.class));
-        */
-        return Optional.empty();
     }
 }

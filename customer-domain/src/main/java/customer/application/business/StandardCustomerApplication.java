@@ -34,11 +34,11 @@ public class StandardCustomerApplication implements CustomerApplication {
     }
 
     @Override
-    public Customer updateCustomer(Customer customer) {
+    public Customer updateCustomer(Identity identity, Customer customer) {
         var customerIdentity = customer.getIdentity();
         if (!customerRepository.existsByIdentity(customerIdentity))
             throw new CustomerNotFoundException("Customer does not exist", customerIdentity.getValue());
-        Customer updatedCustomer = customerRepository.update(customer);
+        Customer updatedCustomer = customerRepository.update(identity, customer);
         var businessEvent = new CustomerUpdatedEvent(updatedCustomer);
         eventPublisher.publishEvent(businessEvent);
         return updatedCustomer;

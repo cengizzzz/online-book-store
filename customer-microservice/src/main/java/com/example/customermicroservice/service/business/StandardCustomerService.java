@@ -9,6 +9,7 @@ import com.example.customermicroservice.dto.response.UpdateCustomerResponse;
 import com.example.customermicroservice.service.CustomerService;
 import customer.application.CustomerApplication;
 import customer.application.business.exception.CustomerNotFoundException;
+import customer.domain.Customer;
 import customer.domain.Identity;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -34,16 +35,19 @@ public class StandardCustomerService implements CustomerService {
 
     @Override
     public AddCustomerResponse addCustomer(AddCustomerRequest request) {
-        return null;
+        var customer = modelMapper.map(request, Customer.class);
+        var addedCustomer = customerApplication.addCustomer(customer);
+        return modelMapper.map(addedCustomer, AddCustomerResponse.class);
     }
 
     @Override
-    public UpdateCustomerResponse updateCustomer(UpdateCustomerRequest request) {
+    public UpdateCustomerResponse updateCustomer(String identity, UpdateCustomerRequest request) {
         return null;
     }
 
     @Override
     public DeleteCustomerResponse deleteCustomerByIdentity(String identity) {
-        return null;
+        var customer =	customerApplication.removeCustomer(Identity.of(identity));
+        return modelMapper.map(customer,DeleteCustomerResponse.class);
     }
 }

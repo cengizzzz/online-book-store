@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="customer-domain" />
-        <module name="bookstore" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
         <module name="catalog-domain" />
