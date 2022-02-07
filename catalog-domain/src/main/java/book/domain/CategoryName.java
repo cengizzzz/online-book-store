@@ -1,20 +1,22 @@
 package book.domain;
 
-public class CategoryName {
-    private final String categoryName;
+import java.util.List;
 
-    public CategoryName(String categoryName) {
+public class CategoryName {
+    private final List<String> categoryName;
+
+    public CategoryName(List categoryName) {
         this.categoryName = categoryName;
     }
 
-    public String getCategoryName() {
+    public List getCategoryName() {
         return categoryName;
     }
 
     @Override
     public String toString() {
         return "CategoryName{" +
-                "categoryName='" + categoryName + '\'' +
+                "categoryName=" + categoryName +
                 '}';
     }
 }
