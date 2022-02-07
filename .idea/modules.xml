@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/catalog-domain/catalog-domain.iml" filepath="$PROJECT_DIR$/catalog-domain/catalog-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookstore/catalog-microservice.iml" filepath="$PROJECT_DIR$/bookstore/catalog-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer-domain/customer-domain.iml" filepath="$PROJECT_DIR$/customer-domain/customer-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer-microservice/customer-microservice.iml" filepath="$PROJECT_DIR$/customer-microservice/customer-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/online-book-store.iml" filepath="$PROJECT_DIR$/.idea/online-book-store.iml" />

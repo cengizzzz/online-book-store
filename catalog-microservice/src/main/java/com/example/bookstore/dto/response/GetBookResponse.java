@@ -1,6 +1,5 @@
 package com.example.bookstore.dto.response;
 
-import category.domain.Category;
 import publisher.domain.Publisher;
 
 import java.util.Arrays;
@@ -14,13 +13,21 @@ public class GetBookResponse {
     private String edition;
     private int publicationYear;
     private double price;
+    private List<String> categoryName;
     private List<String> content;
     private int popularity;
     private byte[] coverPhoto;
     private List<String> reviews;
-    private Category category;
 
     public GetBookResponse() {
+    }
+
+    public List<String> getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(List<String> categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getIsbn() {
@@ -111,13 +118,6 @@ public class GetBookResponse {
         this.reviews = reviews;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 
     @Override
     public String toString() {
@@ -129,11 +129,11 @@ public class GetBookResponse {
                 ", edition='" + edition + '\'' +
                 ", publicationYear=" + publicationYear +
                 ", price=" + price +
+                ", categoryName=" + categoryName +
                 ", content=" + content +
                 ", popularity=" + popularity +
                 ", coverPhoto=" + Arrays.toString(coverPhoto) +
                 ", reviews=" + reviews +
-                ", category=" + category +
                 '}';
     }
 }

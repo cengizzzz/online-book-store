@@ -1,12 +1,16 @@
 package com.example.bookstore.adapter;
 
 import book.domain.Book;
+import book.domain.CategoryName;
 import book.domain.Isbn;
 import book.repository.BookRepository;
+import com.example.bookstore.dto.response.GetBookResponse;
 import com.example.bookstore.repository.BookJpaRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -26,10 +30,11 @@ public class BookRepositoryMySqlAdapter implements BookRepository {
     }
 
     @Override
-    public Book FindByCategory(Book categoryName) {
-        return null;
+    public List<GetBookResponse> findAllByPage(int pageNo, int pageSize) {
+        return bookJpaRepository.findAll(PageRequest.of(pageNo, pageSize)).getContent()
+                .stream()
+                .map(book -> mapper.map(book, GetBookResponse.class)).toList();
     }
-
     @Override
     public Book update(Book book) {
         return null;
@@ -52,5 +57,10 @@ public class BookRepositoryMySqlAdapter implements BookRepository {
     public Optional<Book> findBookByIsbn(Isbn isbn) {
         return bookJpaRepository.findById(isbn.getValue())
                 .map(doc -> mapper.map(doc, Book.class));
+    }
+
+    @Override
+    public List<String> findAllByCategory(CategoryName categoryName) {
+        return null;
     }
 }

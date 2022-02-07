@@ -4,7 +4,6 @@ import stock.application.business.event.StockEvent;
 import stock.insfrastructure.StockEventPublisher;
 import book.application.business.events.BookEvent;
 import book.infrastructure.EventPublisher;
-import category.application.business.events.CategoryEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import customer.infrastructure.CustomerEventPublisher;

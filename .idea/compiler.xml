@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="customer-domain" />
+
+        <module name="catalog-microservice" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
         <module name="catalog-domain" />
@@ -17,8 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bookstore" target="17" />
       <module name="catalog-domain" target="17" />
+      <module name="catalog-microservice" target="17" />
       <module name="category-subdomain" target="17" />
       <module name="customer-domain" target="17" />
       <module name="customer-microservice" target="17" />
@@ -31,7 +33,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="bookstore" options="-parameters" />
+      <module name="catalog-microservice" options="-parameters" />
       <module name="customer-microservice" options="-parameters" />
     </option>
   </component>

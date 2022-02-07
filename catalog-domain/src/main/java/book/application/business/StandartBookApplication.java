@@ -10,12 +10,13 @@ import book.domain.Isbn;
 import book.infrastructure.EventPublisher;
 import book.repository.BookRepository;
 
+import java.util.List;
 import java.util.Optional;
 
-public class StandartBookApplication implements BookApplication {
+public class StandartBookApplication implements BookApplication
+{
     private BookRepository bookRepository;
     private EventPublisher eventPublisher;
-
     public StandartBookApplication(BookRepository bookRepository, EventPublisher eventPublisher) {
         this.bookRepository = bookRepository;
         this.eventPublisher = eventPublisher;
@@ -60,6 +61,7 @@ public class StandartBookApplication implements BookApplication {
     }
 
     @Override
-    public Book FindByCategory(Book categoryName) {
-        return bookRepository.FindByCategory(categoryName);    }
+    public List<Book> findByCategory(List<String> categoryName) {
+        return null;
+    }
 }
