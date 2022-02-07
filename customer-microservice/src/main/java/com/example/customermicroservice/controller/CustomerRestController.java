@@ -47,7 +47,7 @@ public class CustomerRestController {
         return customerService.deleteCustomerByIdentity(identity);
     }
     @PutMapping("identity")
-    public UpdateCustomerResponse updateCustomerResponse(@RequestBody @Validated UpdateCustomerRequest request){
-        return customerService.updateCustomer(request);
+    public UpdateCustomerResponse updateCustomerResponse(@PathVariable @TcKimlikNo String identity,@RequestBody @Validated UpdateCustomerRequest request){
+        return customerService.updateCustomer(identity,request);
     }
 }

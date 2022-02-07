@@ -10,12 +10,6 @@
     <dependencies>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>book-domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
             <artifactId>customer-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
