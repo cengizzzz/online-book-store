@@ -10,6 +10,7 @@
         <module name="book-domain" />
         <module name="bookstore" />
         <module name="category-subdomain" />
+        <module name="stock-microservis" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
         <module name="requistion-subdomain" />
@@ -28,6 +29,7 @@
       <module name="publisher-subdomain" target="17" />
       <module name="requistion-subdomain" target="17" />
       <module name="sale-subdomain" target="17" />
+      <module name="stock-microservis" target="17" />
       <module name="stock-subdomain" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -35,6 +37,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bookstore" options="-parameters" />
       <module name="customer-microservice" options="-parameters" />
+      <module name="stock-microservis" options="-parameters" />
     </option>
   </component>
 </project>
