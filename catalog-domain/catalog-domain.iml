@@ -10,7 +10,10 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="catalog-domain" />
+          <factory-entry name="entityManagerFactory" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -27,8 +30,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="publisher-subdomain" />
     <orderEntry type="module" module-name="catalog-microservice" />
+    <orderEntry type="module" module-name="publisher-subdomain" />
+    <orderEntry type="module" module-name="catalog" />
     <orderEntry type="module" module-name="order-subdomain" />
     <orderEntry type="module" module-name="customer-domain" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
