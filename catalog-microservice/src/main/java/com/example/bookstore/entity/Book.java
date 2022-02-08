@@ -21,8 +21,13 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
+<<<<<<< HEAD
+    @OneToMany(targetEntity = Publisher.class)
+    private Publisher publisher;
+=======
     @ManyToOne
     private com.example.bookstore.entity.Publisher publisher;
+>>>>>>> 7f31e219b95fbda0c37ac6538921dccfa20aaf3c
     @NotBlank
     private String edition;
     private int publicationYear;
