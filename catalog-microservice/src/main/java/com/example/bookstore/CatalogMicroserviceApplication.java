@@ -4,11 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookstoreApplication {
+public class CatalogMicroserviceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BookstoreApplication.class, args);
-
+        SpringApplication.run(CatalogMicroserviceApplication.class, args);
     }
 
 }
