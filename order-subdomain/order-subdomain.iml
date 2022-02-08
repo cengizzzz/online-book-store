@@ -34,11 +34,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="catalog-microservice" />
     <orderEntry type="module" module-name="customer-domain" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
     <orderEntry type="module" module-name="catalog-domain" />
     <orderEntry type="module" module-name="publisher-subdomain" />
-    <orderEntry type="module" module-name="catalog-microservice" />
+    <orderEntry type="module" module-name="catalog" />
     <orderEntry type="module" module-name="stock-subdomain" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.5.6" level="project" />

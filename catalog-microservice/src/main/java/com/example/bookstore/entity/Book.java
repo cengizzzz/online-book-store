@@ -21,7 +21,7 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
-    @OneToMany
+    @OneToMany(targetEntity = Publisher.class)
     private Publisher publisher;
     @NotBlank
     private String edition;
