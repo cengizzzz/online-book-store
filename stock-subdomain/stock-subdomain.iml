@@ -36,9 +36,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="catalog" />
     <orderEntry type="module" module-name="catalog-domain" />
     <orderEntry type="module" module-name="publisher-subdomain" />
-    <orderEntry type="module" module-name="catalog" />
+    <orderEntry type="module" module-name="bookstore" />
     <orderEntry type="module" module-name="order-subdomain" />
     <orderEntry type="module" module-name="customer-domain" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
