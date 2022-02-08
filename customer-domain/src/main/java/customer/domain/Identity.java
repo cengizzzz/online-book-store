@@ -13,7 +13,7 @@ public final class Identity {
         if (value == null) throw new IllegalArgumentException("Hatalı identity!");
 
         if (value.length() != 11) throw new IllegalArgumentException("Hatalı identity!");
-
+        /*
         char[] chars = value.toCharArray();
         int[] a = new int[11];
 
@@ -28,6 +28,7 @@ public final class Identity {
 
         if ((a[0] + a[1] + a[2] + a[3] + a[4] + a[5] + a[6] + a[7] + a[8] + a[9]) % 10 != a[10])
             throw new IllegalArgumentException("Hatalı identity!");
+        */
         return new Identity(value);
     }
 

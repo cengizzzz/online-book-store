@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/catalog-microservice/bookstore.iml" filepath="$PROJECT_DIR$/catalog-microservice/bookstore.iml" />
       <module fileurl="file://$PROJECT_DIR$/catalog-microservice/catalog.iml" filepath="$PROJECT_DIR$/catalog-microservice/catalog.iml" />
       <module fileurl="file://$PROJECT_DIR$/catalog-domain/catalog-domain.iml" filepath="$PROJECT_DIR$/catalog-domain/catalog-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore/catalog-microservice.iml" filepath="$PROJECT_DIR$/bookstore/catalog-microservice.iml" />

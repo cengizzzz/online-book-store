@@ -31,7 +31,6 @@ public class CustomerRestController {
 
     @GetMapping("{identity}")
     @ApiOperation(value = "This method is used to get the customer for the given {identity}")
-
     public GetCustomerResponse getCustomerByIdentity(@PathVariable @TcKimlikNo String identity){
         return customerService.findCustomerByIdentity(identity);
     }

@@ -21,6 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bookstore" target="17" />
       <module name="catalog" target="17" />
       <module name="catalog-domain" target="17" />
       <module name="catalog-microservice" target="17" />
@@ -37,6 +38,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bookstore" options="-parameters" />
       <module name="catalog" options="-parameters" />
       <module name="catalog-microservice" options="-parameters" />
       <module name="customer-microservice" options="-parameters" />
