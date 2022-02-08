@@ -1,5 +1,7 @@
 package publisher.infrastructure;
 
-public interface PublisherEventPublisher {
+import publisher.application.business.events.PublisherEvent;
 
+public interface PublisherEventPublisher {
+    void publishEvent(PublisherEvent businessEvent);
 }
