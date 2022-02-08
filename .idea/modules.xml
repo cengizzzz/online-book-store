@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/customer-microservice/customer-microservice.iml" filepath="$PROJECT_DIR$/customer-microservice/customer-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/online-book-store.iml" filepath="$PROJECT_DIR$/.idea/online-book-store.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-subdomain/order-subdomain.iml" filepath="$PROJECT_DIR$/order-subdomain/order-subdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/publisher-microservice/publisher-microservice.iml" filepath="$PROJECT_DIR$/publisher-microservice/publisher-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" filepath="$PROJECT_DIR$/publisher-subdomain/publisher-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" filepath="$PROJECT_DIR$/requistion-subdomain/requistion-subdomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" filepath="$PROJECT_DIR$/sale-subdomain/sale-subdomain.iml" />

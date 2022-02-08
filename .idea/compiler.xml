@@ -28,6 +28,7 @@
       <module name="customer-domain" target="17" />
       <module name="customer-microservice" target="17" />
       <module name="order-subdomain" target="17" />
+      <module name="publisher-microservice" target="17" />
       <module name="publisher-subdomain" target="17" />
       <module name="requistion-subdomain" target="17" />
       <module name="sale-subdomain" target="17" />
@@ -40,6 +41,7 @@
       <module name="catalog" options="-parameters" />
       <module name="catalog-microservice" options="-parameters" />
       <module name="customer-microservice" options="-parameters" />
+      <module name="publisher-microservice" options="-parameters" />
       <module name="stock-microservis" options="-parameters" />
     </option>
   </component>
