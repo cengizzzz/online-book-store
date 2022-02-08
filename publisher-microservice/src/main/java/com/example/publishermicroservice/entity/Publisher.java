@@ -1,4 +1,4 @@
-package com.example.bookstore.entity;
+package com.example.publishermicroservice.entity;
 
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -9,22 +9,15 @@ import java.util.Arrays;
 import java.util.Objects;
 
 @Entity
-@Table(name = "publisher")
+@Table(name="publisher")
 @DynamicUpdate
-public class Publisher {
+public class Publisher{
     @Id
     private String publisherID;
     private String publisherName;
     private Byte[] publisherLogo;
 
     public Publisher() {
-
-    }
-
-    public Publisher(String publisherID, String publisherName, Byte[] publisherLogo) {
-        this.publisherID = publisherID;
-        this.publisherName = publisherName;
-        this.publisherLogo = publisherLogo;
     }
 
     public String getPublisherID() {
@@ -56,7 +49,7 @@ public class Publisher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Publisher publisher = (Publisher) o;
-        return Objects.equals(getPublisherID(), publisher.getPublisherID());
+        return getPublisherID().equals(publisher.getPublisherID());
     }
 
     @Override
@@ -73,4 +66,3 @@ public class Publisher {
                 '}';
     }
 }
-

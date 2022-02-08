@@ -21,13 +21,8 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
-<<<<<<< HEAD
-    @OneToMany(targetEntity = Publisher.class)
-    private Publisher publisher;
-=======
     @ManyToOne
-    private com.example.bookstore.entity.Publisher publisher;
->>>>>>> 7f31e219b95fbda0c37ac6538921dccfa20aaf3c
+    private Publisher publisher;
     @NotBlank
     private String edition;
     private int publicationYear;
@@ -76,11 +71,12 @@ public class Book {
         this.author = author;
     }
 
-    public com.example.bookstore.entity.Publisher getPublisher() {
+
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(com.example.bookstore.entity.Publisher publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 

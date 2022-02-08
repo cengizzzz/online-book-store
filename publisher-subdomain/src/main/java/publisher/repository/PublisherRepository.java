@@ -15,6 +15,4 @@ public interface PublisherRepository {
     Optional<Publisher> delete(PublisherID publisherID);
 
     Optional<Publisher> findBookByIsbn(PublisherID publisherID);
-
-
 }
