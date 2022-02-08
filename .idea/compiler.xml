@@ -2,18 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="customer-domain" />
-        <module name="catalog-microservice" />
         <module name="publisher-subdomain" />
         <module name="sale-subdomain" />
-        <module name="catalog-domain" />
         <module name="catalog" />
-        <module name="requistion-subdomain" />
+        <module name="catalog-domain" />
         <module name="customer-microservice" />
+        <module name="requistion-subdomain" />
         <module name="stock-subdomain" />
         <module name="order-subdomain" />
       </profile>
@@ -21,8 +20,6 @@
     <bytecodeTargetLevel>
       <module name="catalog" target="17" />
       <module name="catalog-domain" target="17" />
-      <module name="catalog-microservice" target="17" />
-      <module name="category-subdomain" target="17" />
       <module name="customer-domain" target="17" />
       <module name="customer-microservice" target="17" />
       <module name="order-subdomain" target="17" />
@@ -35,7 +32,6 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="catalog" options="-parameters" />
-      <module name="catalog-microservice" options="-parameters" />
       <module name="customer-microservice" options="-parameters" />
     </option>
   </component>
