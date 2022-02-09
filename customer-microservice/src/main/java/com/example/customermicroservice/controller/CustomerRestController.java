@@ -20,7 +20,6 @@ import org.springframework.web.context.annotation.RequestScope;
 @CrossOrigin
 @Validated
 @Api( tags = "Customers")
-
 public class CustomerRestController {
 
     private CustomerService customerService;

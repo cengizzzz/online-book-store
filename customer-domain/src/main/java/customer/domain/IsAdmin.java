@@ -1,17 +1,17 @@
 package customer.domain;
 
 public final class IsAdmin {
-    private final boolean value;
+    private final String value;
 
-    private IsAdmin(boolean value) {
+    public IsAdmin(String value) {
         this.value = value;
     }
 
-    public static IsAdmin of(boolean value) {
+    public static IsAdmin of(String value) {
         return new IsAdmin(value);
     }
 
-    public boolean getValue() {
+    public String getValue() {
         return value;
     }
 
