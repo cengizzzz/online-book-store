@@ -5,16 +5,11 @@ import com.example.publishermicroservice.dto.response.AddPublisherResponse;
 import com.example.publishermicroservice.entity.Publisher;
 import com.example.publishermicroservice.repository.PublisherJpaRepository;
 import com.example.publishermicroservice.service.PublisherService;
-import org.dom4j.rule.Mode;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import publisher.application.PublisherApplication;
-import publisher.domain.PublisherID;
 import publisher.infrastructure.PublisherEventPublisher;
 import publisher.repository.PublisherRepository;
-
-import java.util.Optional;
-
 
 @Service
 public class StandardPublisherService implements PublisherService{

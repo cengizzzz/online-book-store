@@ -3,12 +3,8 @@ package com.example.publishermicroservice.entity;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
-import java.util.Arrays;
 import java.util.Objects;
 
-
-//@ManyToOne
-//@JoinColumn(name = "publisherID")
 @Entity
 @Table(name="publisher")
 @DynamicUpdate

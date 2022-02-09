@@ -21,7 +21,7 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Publisher publisher;
     @NotBlank
     private String edition;
