@@ -12,9 +12,9 @@
         <option value="$PROJECT_DIR$/requistion-subdomain/pom.xml" />
         <option value="$PROJECT_DIR$/sale-subdomain/pom.xml" />
         <option value="$PROJECT_DIR$/customer-microservice/pom.xml" />
-
         <option value="$PROJECT_DIR$/catalog-domain/pom.xml" />
         <option value="$PROJECT_DIR$/catalog-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/publisher-microservice/pom.xml" />
       </list>
     </option>
   </component>

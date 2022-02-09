@@ -2,10 +2,10 @@ package book.domain;
 
 import java.util.List;
 
-public class CategoryName {
+public final class CategoryName {
     private final List<String> categoryName;
 
-    public CategoryName(List categoryName) {
+    private CategoryName(List categoryName) {
         this.categoryName = categoryName;
     }
 

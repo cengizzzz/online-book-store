@@ -20,7 +20,7 @@ public class Publisher {
             this.publisherName = PublisherName.of(value);
             return this;
         }
-        public Builder publisherLogo(byte[] value){
+        public Builder publisherLogo(String value){
             this.publisherLogo = PublisherLogo.of(value);
             return this;
         }

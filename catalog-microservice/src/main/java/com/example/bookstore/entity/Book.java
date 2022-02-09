@@ -21,8 +21,8 @@ public class Book {
     private String title;
     @NotBlank
     private String author;
-    @ManyToOne
-    private com.example.bookstore.entity.Publisher publisher;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Publisher publisher;
     @NotBlank
     private String edition;
     private int publicationYear;
@@ -71,11 +71,12 @@ public class Book {
         this.author = author;
     }
 
-    public com.example.bookstore.entity.Publisher getPublisher() {
+
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(com.example.bookstore.entity.Publisher publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 

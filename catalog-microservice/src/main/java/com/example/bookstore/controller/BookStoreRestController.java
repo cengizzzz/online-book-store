@@ -31,13 +31,11 @@ public class BookStoreRestController {
 
     @GetMapping("{isbn}")
     @ApiOperation(value = "This method is used to get the book for the given {isbn}")
-
     public GetBookResponse getBookByIsbn(@PathVariable @IsbnValidation String isbn){
         return bookStoreServis.findBookByIsbn(isbn);
     }
     @PostMapping
-    public AddBookResponse addBook(
-            @RequestBody @Validated AddBookRequest request){
+    public AddBookResponse addBook(@RequestBody @Validated AddBookRequest request){
                 return bookStoreServis.addBook(request);
 
     }
