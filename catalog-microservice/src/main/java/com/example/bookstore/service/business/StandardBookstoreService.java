@@ -2,6 +2,7 @@ package com.example.bookstore.service.business;
 
 import book.application.BookApplication;
 import book.application.business.exception.BookNotFoundException;
+import book.domain.Book;
 import book.domain.Isbn;
 import com.example.bookstore.dto.request.AddBookRequest;
 import com.example.bookstore.dto.request.UpdateRequest;
@@ -10,8 +11,10 @@ import com.example.bookstore.dto.response.DeleteBookResponse;
 import com.example.bookstore.dto.response.GetBookResponse;
 import com.example.bookstore.dto.response.UpdateBookResponse;
 import com.example.bookstore.service.BookstoreService;
+import customer.domain.Customer;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import publisher.domain.Publisher;
 
 @Service
 public class StandardBookstoreService implements BookstoreService {
@@ -34,7 +37,9 @@ public class StandardBookstoreService implements BookstoreService {
 
     @Override
     public AddBookResponse addBook(AddBookRequest request) {
-        return null;
+        var book = modelMapper.map(request, Book.class);
+        var addedCustomer = bookApplication.addBook(book);
+        return modelMapper.map(addedCustomer, AddBookResponse.class);
     }
 
     @Override

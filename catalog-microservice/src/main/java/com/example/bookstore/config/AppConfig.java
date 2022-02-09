@@ -15,6 +15,4 @@ public class AppConfig {
                                    EventPublisher eventPublisher) {
         return new StandartBookApplication(bookRepository, eventPublisher);
     }
-
-    //customer ve diğerleri için de yapılacak....
 }

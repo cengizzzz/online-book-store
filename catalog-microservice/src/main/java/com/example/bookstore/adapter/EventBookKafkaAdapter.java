@@ -1,5 +1,6 @@
 package com.example.bookstore.adapter;
 
+import publisher.application.business.events.AddPublisher;
 import stock.application.business.event.StockEvent;
 import stock.insfrastructure.StockEventPublisher;
 import book.application.business.events.BookEvent;
@@ -20,13 +21,13 @@ import sale.application.business.events.SaleEvent;
 
 
 @Service
-public class EventPublisherKafkaAdapter implements
+public class EventBookKafkaAdapter implements
         EventPublisher, CustomerEventPublisher, StockEventPublisher, OrderEventPublisher
         , requistion.infrastructure.EventPublisher,
         publisher.infrastructure.PublisherEventPublisher, sale.infrastructure.SaleEventPublisher {
 
     private static final Logger logger =
-            LoggerFactory.getLogger(EventPublisherKafkaAdapter.class);
+            LoggerFactory.getLogger(EventBookKafkaAdapter.class);
     @Value("${book.events.topic}")
     private String bookTopicName;
     @Value("${customer.events.topic}")
@@ -45,7 +46,7 @@ public class EventPublisherKafkaAdapter implements
     private KafkaTemplate<String, String> kafkaTemplate;
     private ObjectMapper mapper;
 
-    public EventPublisherKafkaAdapter(KafkaTemplate<String, String> kafkaTemplate, ObjectMapper mapper) {
+    public EventBookKafkaAdapter(KafkaTemplate<String, String> kafkaTemplate, ObjectMapper mapper) {
         this.kafkaTemplate = kafkaTemplate;
         this.mapper = mapper;
     }
@@ -115,4 +116,10 @@ public class EventPublisherKafkaAdapter implements
                     e.getMessage());
         }
     }
+
+    @Override
+    public void publishEvent(AddPublisher businessEvent) {
+
+    }
+
 }

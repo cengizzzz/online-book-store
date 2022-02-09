@@ -1,30 +1,24 @@
-package com.example.bookstore.entity;
+package com.example.publishermicroservice.entity;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Objects;
 
+
+//@ManyToOne
+//@JoinColumn(name = "publisherID")
 @Entity
-@Table(name = "publisher")
+@Table(name="publisher")
 @DynamicUpdate
-public class Publisher {
+public class Publisher{
     @Id
     private String publisherID;
     private String publisherName;
-    private Byte[] publisherLogo;
+    private String publisherLogo;
 
     public Publisher() {
-
-    }
-
-    public Publisher(String publisherID, String publisherName, Byte[] publisherLogo) {
-        this.publisherID = publisherID;
-        this.publisherName = publisherName;
-        this.publisherLogo = publisherLogo;
     }
 
     public String getPublisherID() {
@@ -43,11 +37,11 @@ public class Publisher {
         this.publisherName = publisherName;
     }
 
-    public Byte[] getPublisherLogo() {
+    public String getPublisherLogo() {
         return publisherLogo;
     }
 
-    public void setPublisherLogo(Byte[] publisherLogo) {
+    public void setPublisherLogo(String publisherLogo) {
         this.publisherLogo = publisherLogo;
     }
 
@@ -56,7 +50,7 @@ public class Publisher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Publisher publisher = (Publisher) o;
-        return Objects.equals(getPublisherID(), publisher.getPublisherID());
+        return getPublisherID().equals(publisher.getPublisherID());
     }
 
     @Override
@@ -69,8 +63,7 @@ public class Publisher {
         return "Publisher{" +
                 "publisherID='" + publisherID + '\'' +
                 ", publisherName='" + publisherName + '\'' +
-                ", publisherLogo=" + Arrays.toString(publisherLogo) +
+                ", publisherLogo=" + publisherLogo +
                 '}';
     }
 }
-
