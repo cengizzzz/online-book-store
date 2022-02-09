@@ -29,7 +29,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private String apiMinorVersion;
     @Value("${apiTimeStamp}")
     private long apiTimeStamp;
-    @Value("${server.servlet.context-path}")
+    @Value("/publisher")
     private String contextPath;
     @Value("${spring.mvc.servlet.path}")
     private String servletPath;
@@ -44,7 +44,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     public Docket api(ServletContext servletContext) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage( "com.example.bookstore" ))
+                .apis(RequestHandlerSelectors.basePackage( "com.example.publisher" ))
                 .paths(PathSelectors.any())
                 .build()
                 .host(host.concat(":").concat(Long.toString(port)))

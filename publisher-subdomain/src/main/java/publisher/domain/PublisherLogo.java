@@ -3,17 +3,17 @@ package publisher.domain;
 import java.util.Objects;
 
 public final class PublisherLogo {
-    private final byte[] publisherLogo;
+    private final String publisherLogo;
 
-    private PublisherLogo(byte[] publisherLogo) {
+    private PublisherLogo(String publisherLogo) {
         this.publisherLogo = publisherLogo;
     }
 
-    public static PublisherLogo of(byte[] value) {
+    public static PublisherLogo of(String value) {
         return new PublisherLogo(value);
     }
 
-    public byte[] getPublisherLogo() {
+    public String getPublisherLogo() {
         return publisherLogo;
     }
 

@@ -35,8 +35,7 @@ public class BookStoreRestController {
         return bookStoreServis.findBookByIsbn(isbn);
     }
     @PostMapping
-    public AddBookResponse addBook(
-            @RequestBody @Validated AddBookRequest request){
+    public AddBookResponse addBook(@RequestBody @Validated AddBookRequest request){
                 return bookStoreServis.addBook(request);
 
     }

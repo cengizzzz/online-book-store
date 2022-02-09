@@ -1,24 +1,16 @@
-package com.example.publishermicroservice.entity;
+package com.example.publishermicroservice.dto.request;
 
-import org.hibernate.annotations.DynamicUpdate;
-
-import javax.persistence.*;
+import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Objects;
 
-
-//@ManyToOne
-//@JoinColumn(name = "publisherID")
-@Entity
-@Table(name="publisher")
-@DynamicUpdate
-public class Publisher{
+public class AddPublisherRequest {
     @Id
     private String publisherID;
     private String publisherName;
     private String publisherLogo;
 
-    public Publisher() {
+    public AddPublisherRequest() {
     }
 
     public String getPublisherID() {
@@ -46,24 +38,24 @@ public class Publisher{
     }
 
     @Override
+    public String toString() {
+        return "AddPublisherRequest{" +
+                "publisherID='" + publisherID + '\'' +
+                ", publisherName='" + publisherName + '\'' +
+                ", publisherLogo=" + publisherLogo +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Publisher publisher = (Publisher) o;
-        return getPublisherID().equals(publisher.getPublisherID());
+        AddPublisherRequest that = (AddPublisherRequest) o;
+        return getPublisherID().equals(that.getPublisherID());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getPublisherID());
-    }
-
-    @Override
-    public String toString() {
-        return "Publisher{" +
-                "publisherID='" + publisherID + '\'' +
-                ", publisherName='" + publisherName + '\'' +
-                ", publisherLogo=" + publisherLogo +
-                '}';
     }
 }
