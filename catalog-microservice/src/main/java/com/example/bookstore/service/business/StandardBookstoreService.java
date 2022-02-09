@@ -9,6 +9,8 @@ import com.example.bookstore.dto.response.AddBookResponse;
 import com.example.bookstore.dto.response.DeleteBookResponse;
 import com.example.bookstore.dto.response.GetBookResponse;
 import com.example.bookstore.dto.response.UpdateBookResponse;
+import com.example.bookstore.entity.Book;
+import com.example.bookstore.repository.BookJpaRepository;
 import com.example.bookstore.service.BookstoreService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -18,10 +20,12 @@ public class StandardBookstoreService implements BookstoreService {
 
     private BookApplication bookApplication;
     private ModelMapper modelMapper;
+    private BookJpaRepository bookJpaRepository;
 
-    public StandardBookstoreService(BookApplication bookApplication, ModelMapper modelMapper) {
+    public StandardBookstoreService(BookApplication bookApplication, ModelMapper modelMapper,BookJpaRepository bookJpaRepository) {
         this.bookApplication = bookApplication;
         this.modelMapper = modelMapper;
+        this.bookJpaRepository=bookJpaRepository;
     }
 
     @Override
@@ -34,7 +38,9 @@ public class StandardBookstoreService implements BookstoreService {
 
     @Override
     public AddBookResponse addBook(AddBookRequest request) {
-        return null;
+        var book = modelMapper.map(request, Book.class);
+        return modelMapper.map(bookJpaRepository.save(book),
+                AddBookResponse.class);
     }
 
     @Override
