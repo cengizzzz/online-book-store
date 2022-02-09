@@ -1,8 +1,11 @@
 package customer.domain;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public final class Identity {
+    private final static Map<String, Identity> cache = new HashMap<>();
     private final String value;
 
     private Identity(String value) {
@@ -10,43 +13,50 @@ public final class Identity {
     }
 
     public static Identity of(String value) {
-        if (value == null) throw new IllegalArgumentException("Hatalı identity!");
-
-        if (value.length() != 11) throw new IllegalArgumentException("Hatalı identity!");
-        /*
-        char[] chars = value.toCharArray();
-        int[] a = new int[11];
-
-        for (int i = 0; i < 11; i++) {
-            a[i] = chars[i] - '0';
+        if (!isValid(value))
+            throw new IllegalArgumentException("This is not a valid identity no!");
+        var identity = cache.get(value);
+        if (Objects.isNull(identity)) {
+            identity = new Identity(value);
+            cache.put(value, identity);
         }
-        if (a[0] == 0) throw new IllegalArgumentException("Hatalı identity!");
-        if (a[10] % 2 == 1) throw new IllegalArgumentException("Hatalı identity!");
+        return identity;
+    }
 
-        if (((a[0] + a[2] + a[4] + a[6] + a[8]) * 7 - (a[1] + a[3] + a[5] + a[7])) % 10 != a[9])
-            throw new IllegalArgumentException("Hatalı identity!");
-
-        if ((a[0] + a[1] + a[2] + a[3] + a[4] + a[5] + a[6] + a[7] + a[8] + a[9]) % 10 != a[10])
-            throw new IllegalArgumentException("Hatalı identity!");
-        */
-        return new Identity(value);
+    private static boolean isValid(String value) {
+        if (value == null)
+            return false;
+        if (!value.matches("^\\d{11}$")) { // fail-fast
+            return false;
+        }
+        int[] digits = new int[11];
+        for (int i = 0; i < digits.length; ++i) {
+            digits[i] = value.charAt(i) - '0';
+        }
+        int x = digits[0];
+        int y = digits[1];
+        for (int i = 1; i < 5; i++) {
+            x += digits[2 * i];
+        }
+        for (int i = 2; i <= 4; i++) {
+            y += digits[2 * i - 1];
+        }
+        int c1 = 7 * x - y;
+        if (c1 % 10 != digits[9]) {
+            return false;
+        }
+        int c2 = 0;
+        for (int i = 0; i < 10; ++i) {
+            c2 += digits[i];
+        }
+        if (c2 % 10 != digits[10]) {
+            return false;
+        }
+        return true;
     }
 
     public String getValue() {
         return value;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Identity identity = (Identity) o;
-        return value.equals(identity.value);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(value);
     }
 
     @Override

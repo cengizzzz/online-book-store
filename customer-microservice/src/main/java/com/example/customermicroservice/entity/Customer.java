@@ -3,6 +3,7 @@ package com.example.customermicroservice.entity;
 import com.example.customermicroservice.validation.TcKimlikNo;
 import customer.domain.Interests;
 import org.hibernate.annotations.DynamicUpdate;
+//import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -10,6 +11,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
+//@Document(collection = "employees")
 
 @Entity
 @Table(name="customers")
@@ -33,7 +35,7 @@ public class Customer {
     @NotBlank
     private String username;
     private String password;
-    private boolean isAdmin;
+    private String isAdmin;
 
     public Customer() {
     }
@@ -110,11 +112,11 @@ public class Customer {
         this.password = password;
     }
 
-    public boolean isAdmin() {
+    public String isAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(boolean admin) {
+    public void setAdmin(String admin) {
         isAdmin = admin;
     }
 
@@ -123,7 +125,7 @@ public class Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return identity.equals(customer.identity);
+        return Objects.equals(identity, customer.identity);
     }
 
     @Override
