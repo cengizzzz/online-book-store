@@ -1,24 +1,13 @@
-package com.example.publishermicroservice.entity;
+package com.example.publishermicroservice.dto.response;
 
-import org.hibernate.annotations.DynamicUpdate;
-
-import javax.persistence.*;
 import java.util.Arrays;
-import java.util.Objects;
 
-
-//@ManyToOne
-//@JoinColumn(name = "publisherID")
-@Entity
-@Table(name="publisher")
-@DynamicUpdate
-public class Publisher{
-    @Id
+public class AddPublisherResponse {
     private String publisherID;
     private String publisherName;
     private String publisherLogo;
 
-    public Publisher() {
+    public AddPublisherResponse() {
     }
 
     public String getPublisherID() {
@@ -46,21 +35,8 @@ public class Publisher{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Publisher publisher = (Publisher) o;
-        return getPublisherID().equals(publisher.getPublisherID());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getPublisherID());
-    }
-
-    @Override
     public String toString() {
-        return "Publisher{" +
+        return "AddPublisherResponse{" +
                 "publisherID='" + publisherID + '\'' +
                 ", publisherName='" + publisherName + '\'' +
                 ", publisherLogo=" + publisherLogo +
